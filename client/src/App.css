@@ -1,0 +1,382 @@
+
+body {
+margin: 0 !important;
+background: linear-gradient( 0.45turn,RGBA(255,200,80,0.7),RGBA(200,50,180,0.4),RGBA(150,50,180,0.05)) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*--------------------------*/
+/*App component styling */
+/*--------------------------*/
+.App {
+  text-align: center;
+}
+
+
+/* Navigation bar */
+nav {
+  background-color:#F7EEEC;
+  display: flex;
+  justify-content:space-between;
+  padding-left:5%;
+  padding-right:15%;
+  align-items:center;
+  box-shadow: 0px 0px 5px 2px white;
+}
+
+.nav-link-title{
+  text-decoration: none;
+  color: #FC4503;
+  font-size:2em;
+  transition: 0.8s ease;
+}
+
+.nav-link-title:hover{
+  text-decoration: none;
+  color: #FC45AA;
+}
+
+
+nav > ul {
+  display: flex;
+  list-style-type:none;
+  font-size:1.5em;
+}
+
+nav > ul >li{
+  padding-left:10px;
+  color: #FC4503;
+}
+
+nav > a{
+  text-decoration: none;
+  color: #FC4503;
+}
+
+nav > a:hover{
+  text-decoration: none;
+  color: #FC45CC;
+}
+
+
+/* App */
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #350262;
+}
+
+
+/*Navigation Links*/
+.nav-link {
+color: inherit;
+text-decoration: none;
+margin-right: 15px;
+transition: 0.7s ease;
+}
+.nav-link:hover{
+  border: 5px;
+  background-color: #FC4503;
+  color: #F7EEEC;
+  font-size: 1.5em;
+  border-radius: 15px;
+  padding: 5px;
+}
+.nav-link:active,
+.nav-link:visited {
+  text-decoration: none;
+}
+
+
+
+/*---------------------------------*/
+/* Home Component */
+/*---------------------------------*/
+
+.home-screen{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title{
+  padding: 15% 0 50%;
+  color: white;
+  text-decoration: underline overline white;
+  font-size: 4.5em;
+  font-weight: 1000;
+}
+
+
+
+/*---------------------------------*/
+/*NewFundraiser Component*/
+/*---------------------------------*/
+
+
+.component-title{
+  text-align: center;
+  color: white;
+  text-decoration: underline overline white;
+  font-size: 3.2em;
+  font-weight: 800;
+  
+  margin-bottom:10px;
+
+}
+
+
+.new-form {
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  width: 100%;
+}
+
+
+.form-label{
+  margin-bottom: 2px;
+  color: white;
+  font-weight: 800;
+  
+}
+
+.form-entry{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+
+.short-textarea{
+  width: 30%;
+  height: 1.2em;
+}
+
+
+.long-textarea{
+  width: 35%;
+  height: 5em;
+}
+
+.btn-submit{
+  display: block;
+  font-size: 1.1em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color: white;
+  background-color: #812752;
+  padding: 5px;
+}
+
+
+
+/*---------------------------------*/
+/*FundraisersList Component*/
+/*---------------------------------*/
+.cards{
+  margin-top:30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+
+.card{
+  width: 20%;
+  max-height: 550px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-right:50px;
+  padding: 15px;
+  background-color:white;
+  color: black;
+  border: solid 10px #FC4503;
+  border-radius:30px;
+  box-shadow: 0px 0px 10px 5px #F7EEEC;
+  transition: 0.7s ease;
+  margin-bottom: 30px;
+}
+
+
+.card:hover{
+  width: 22%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-right:50px;
+  padding: 15px;
+  background-color:white;
+  color: black;
+  border: solid 10px #FC4503;
+  border-radius:30px;
+  box-shadow: 0px 0px 10px 5px #F7EEEC;
+}
+
+.card-name{
+  margin-top:3px;
+  width: 100%;
+  color: #FC4503;
+  background-color: #F7EEEC;
+  text-align:center;
+}
+
+
+.card > img{
+  max-width:100%;
+  max-height:50%;
+  border-radius: 50%
+}
+
+
+
+/* Donation pop-up */
+.donation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 0;
+}
+
+.donation-overlay {
+  position: fixed;
+  width: 25%;
+  height: 50%;
+  border-radius:20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+
+.donation-div{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.donation-title{
+  color: white;
+}
+
+.donation-div > ul {
+  color: white;
+  font-size:0.6em;
+  list-style-type:none;
+  padding-left: 1%;
+}
+
+.donation-div > ul >  li {
+  padding-bottom: 5px;
+}
+
+
+.amount-label{
+  color: white;
+  margin-bottom: 1px;
+  margin-left: 50px;
+}
+
+.amount-textarea{
+  margin-top: 1px;
+  margin-left: 50px;
+  width: 40%;
+  height: 1.3em;
+}
+
+
+.modal-buttons{
+  display: flex;
+  padding: 50px;
+  align-items: center;
+}
+
+
+.btn-open-modal{
+  padding-bottom: 1%;
+}
+
+.btn-donate{
+  margin-right: 50px;
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  font-weight: bold;
+  border-radius: 10%;
+  color: black;
+  background-color: white;
+  padding: 5px;
+}
+
+.btn-black{
+  display: block;
+  font-size: 1.1em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  font-weight: bold;
+  border-radius: 10%;
+  color: white;
+  border: solid white 3px;
+  background-color: black;
+  padding: 5px;
+}
+
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+
+
+/*---------------------------------*/
+/* Footer */
+/*---------------------------------*/
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 0.5em;  
+}
+
+
