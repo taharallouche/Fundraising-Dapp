@@ -25,7 +25,6 @@ import "./App.css";
 const App  = () => {
   //states
   const [state,setState] = useState({web3 : null, accounts: null, contract: null});
-  const [storageValue, setStorageValue] = useState(0);
 
   //Effect hook
   useEffect(() => {

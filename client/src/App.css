@@ -281,6 +281,7 @@ transition: 0.7s ease;
 }
 
 .donation-title{
+  margin-top: 20%;
   color: white;
 }
 
@@ -302,11 +303,22 @@ transition: 0.7s ease;
   margin-left: 50px;
 }
 
+
+.amount-entry{
+  display:flex;
+}
+
 .amount-textarea{
   margin-top: 1px;
   margin-left: 50px;
   width: 40%;
   height: 1.3em;
+}
+
+.donation-exchange{
+  color:white;
+  font-size: 0.7em;
+  padding-left: 5%;
 }
 
 

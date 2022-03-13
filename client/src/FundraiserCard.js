@@ -114,6 +114,7 @@ const FundraiserCard = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     function toggleModal() {
     	setIsOpen(!isOpen);
+    	getExchangeRate();
   	}
 
 
@@ -134,8 +135,6 @@ const FundraiserCard = (props) => {
   		const totalDonationsWei = await contract.methods.totalDonations().call();
     	setTotalDonations(web3.utils.fromWei(totalDonationsWei,"ether"));
     	
-    	//Updating Exchange rate
-    	getExchangeRate();
   	}
 
 
@@ -159,8 +158,11 @@ const FundraiserCard = (props) => {
 
         			<form  className = "donation-form" onSubmit={handleDonation}>
         				
-        					<label className="amount-entry"> <p className = "amount-label">Amount</p>
-								<textarea placeholder="0 eth"  className = "amount-textarea" onChange={(e) => setDonation(e.target.value)}/>
+        					<label> <p className = "amount-label">Amount</p>
+        						<div className="amount-entry">
+									<textarea placeholder="0 eth"  className = "amount-textarea" onChange={(e) => setDonation(e.target.value)}/>
+									<p className= "donation-exchange">(= {donation * exchangeRate} TND)</p>
+								</div>
 							</label>
 							
         				
