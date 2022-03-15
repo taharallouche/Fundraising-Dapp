@@ -7,6 +7,7 @@ import {BrowserRouter as Router,Routes, Route, NavLink, Navigate} from "react-ro
 import NewFundraiser from "./NewFundraiser";
 import FundraisersList from "./FundraisersList";
 import Home from "./Home";
+import Withdraw from "./Withdraw";
 
 //Import Web3
 import getWeb3 from "./getWeb3";
@@ -64,6 +65,7 @@ const App  = () => {
             <ul>
                 <li><NavLink className="nav-link" to ="/home/" end>Fundraisers</NavLink></li>
                 <li><NavLink className="nav-link" to ="/new/" end>Create</NavLink></li>
+                <li><NavLink className="nav-link" to ="/withdraw/" end>Custodian</NavLink></li>
             </ul>
           </nav>
                
@@ -72,6 +74,7 @@ const App  = () => {
             <Route path="/home/"  element={<FundraisersList/>}/>
             <Route path="/new/" element={<NewFundraiser/>}/>
             <Route path="/" element={<Home/>}/>
+            <Route path="/withdraw/" element = {<Withdraw/>}/>
           </Routes>
 
         </div>

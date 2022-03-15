@@ -100,10 +100,8 @@ const FundraiserCard = (props) => {
     	
     //Effect hook
     useEffect(() => {
-    	console.log("Fundraiser before INITIIIT", fundraiser)
     	if (fundraiser){
     		init(fundraiser);	
-    		
     	}
     },[fundraiser]);
 

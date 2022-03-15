@@ -54,7 +54,7 @@ const FundraisersList = () => {
 
       	//Load fundraisersList
       	const fundsList = await instance.methods.fundraisers(10,0).call();
-      	console.log("funds:",fundsList[0])
+      	console.log("funds:",fundsList)
       	setFunds(fundsList);
     	}
     	else {
